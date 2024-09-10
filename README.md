@@ -1,5 +1,8 @@
 # This is Transformer 
-- which is used in sentence Translation
+- Sentence translation transformers are advanced models in natural language processing (NLP) that encode entire sentences into high-dimensional vectors, preserving their contextual meaning. These models, such as BERT, RoBERTa, and XLM-RoBERTa, are fine-tuned to generate embeddings that can be used for various tasks like semantic search, clustering, and sentence similarity³. By training on parallel sentences in multiple languages, these transformers can align the vector spaces of different languages, enabling accurate and meaningful translations¹². This approach significantly enhances the performance of NLP applications, making them more effective in multilingual contexts³.
+
+
+![alt text](Image/full_picture_of_transformer.png)
 
 EXample:  
     
