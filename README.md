@@ -75,6 +75,25 @@ def get_config():
     config = get_config()
     train_model(config)
 ```
+# Licence 
+[MIT Licence](https://github.com/ProgramerSalar/PSTransformer/blob/master/LICENSE)
+
+# Dependencies 
+- ```torch``` 
+- ```tqdm ``` this is progress bar library
+- ```datasets ```  this is dataset libarary by huggingface
+- ```tokenizers ```  this is tokenizers libary by huggingface
+- ```tensorboard ```  TensorBoard is a visualization toolkit for machine learning experimentation. TensorBoard allows tracking and visualizing metrics such as loss and accuracy, visualizing the model graph, viewing histograms, displaying images and much more. In this tutorial we are going to cover TensorBoard installation, basic usage with PyTorch, and how to visualize data you logged in TensorBoard UI.
+
+
+# Uninstall
+Uninstall package and dependent package with ```pip``` command .
+```
+pip uninstall PSTransformer torch tqdm datasets tokenizers tensorboard
+```
+
+# Contibuting 
+See [contribution guidelines](https://github.com/ProgramerSalar/PSTransformer/blob/master/CONTRIBUTING.md) .
 
 
 # CHANGELOG
