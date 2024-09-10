@@ -1,6 +1,21 @@
 # This is Transformer 
+- which is used in sentence Translation
+
+EXample:  
+    
+    Ram Eats mango    --> English 
+
+     राम आम खाता  है    --> Hindi
 
 
+- How to Install this 
+```
+pip install PSTransformer==<version>
+
+            OR
+
+pip install PSTransformer
+```
 
 
 - if you are import the model of the Transformer then used to this import 
@@ -60,3 +75,31 @@ def get_config():
     config = get_config()
     train_model(config)
 ```
+
+
+# CHANGELOG
+
+## 1.0.0
+
+- First Implemention version
+    - Add a function 
+
+        - ```BilingualDataset()```
+        - ```build_transformer()```
+
+
+## 2.0.0
+- solve some Error, I will Get the package error 
+
+## 2.1.0 
+- First Stable relased version
+
+   
+
+## 2.2.0
+- Improve document
+    - Update the README document
+    - Add the Licence 
+    - some Required Things 
+
+
