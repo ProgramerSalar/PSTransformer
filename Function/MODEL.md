@@ -7,8 +7,17 @@
 * [PositionalEncoding](#PositionalEncoding)
 * [MultiHeadAttentionBlock](#MultiHeadAttentionBlock)
 * [ProjectionLayer](#ProjectionLayer)
+* [ResidualConnection](#ResidualConnection)
+* [EncoderBlock](#EncoderBlock)
+* [Encoder](#Encoder)
+* [DecoderBlock](#DecoderBlock)
+* [Transformer](#Transformer)
 
-<!-- , , , , ResidualConnection, , EncoderBlock, Encoder, DecoderBlock, Decoder, , Transformer -->
+
+
+
+
+<!-- , , , , , , , , , , ,  -->
 
 ## build_transformer
 
@@ -106,3 +115,103 @@ ProjectionLayer(
 )
 ```
 
+## ResidualConnection
+
+- please define the ```LayerNormalization``` Function Before this used 
+
+```
+>>> from PSTransformer.model import ResidualConnection
+
+ResidualConnection(
+    features: int,
+    dropout
+)
+```
+
+
+## EncoderBlock
+
+- you might define ```MultiHeadAttentionBlock``` and ```FeedForwardBlock```
+
+```
+>>> from PSTransformer.model import EncoderBlock
+
+EncoderBlock(
+    features:int,
+    self_attention_block: MultiHeadAttionBlock,
+    feed_forward_block: FeedForwardBlock,
+    dropout: float
+)
+```
+
+
+## Encoder
+
+- please define the ```LayerNormalization``` Function Before this used 
+
+
+```
+>>> from PSTransformer.model import Encoder
+
+Encoder(
+    features: int,
+    layers: nn.ModuleList
+)
+```
+
+
+## DecoderBlock
+
+- you might define ```MultiHeadAttentionBlock``` and ```FeedForwardBlock```
+
+
+```
+>>> from PSTransformer.model import DecoderBlock
+
+DecoderBlock(
+    features: int,
+    self_attention_block: MultiHeadAttentionBlock,
+    cross_attention_block: MultiHeadAttentionBlock,
+    feed_forward_block: FeedForwardBlock,
+    dropout: float
+)
+```
+
+
+
+## Decoder
+
+- please define the ```LayerNormalization``` Function Before this used 
+
+
+```
+>>> from PSTransformer.model import Decoder
+
+Decoder(
+    features:int,
+    layers: nn.ModuleList
+)
+```
+
+
+## Transformer
+
+- you might define ```Encoder``` and ```Decoder``` and ```PostionalEncoding``` and ```ProjectionLayer```
+- please define the ```InputEmbeddings``` Function Before this used 
+
+
+
+
+```
+>>> from PSTransformer.model import Transformer
+
+Transformer(
+    encoder: Encoder,
+    decoder: Decoder,
+    src_embed: InputEmbeddings,
+    tgt_embed: InputEmbeddings,
+    src_pos: PostionalEncoding,
+    tgt_pos: PostionalEncoding,
+    projection_layer: ProjectionLayer
+)
+```
