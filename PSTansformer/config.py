@@ -18,6 +18,8 @@ def get_config():
         "experiment_name": "runs/tmodel"
     }
 
+
+# GEt the weight file Because if model training are break then continoue the model training  
 def get_weights_file_path(config, epoch: str):
     model_folder = f"{config['datasource']}_{config['model_folder']}"
     model_filename = f"{config['model_basename']}{epoch}.pt"

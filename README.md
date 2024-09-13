@@ -9,9 +9,11 @@ Dump the software license list of Python packages installed with pip.
 * [Description](#description)
 * [Installation](#installation)
 * [License](#license)
-    * [Dependencies](#dependencies)
+* [Dependencies](#Dependencies)
+* [Reference](https://github.com/ProgramerSalar/PSTransformer/blob/master/REFERENCE.md)
 * [Uninstallation](#uninstallation)
 * [Contributing](#contributing)
+* [CHANGELOG](#CHANGELOG)
 
 
 

@@ -1,20 +1,15 @@
-- if you are import the model of the Transformer then used to this import 
-```
-# import the transformer model 
->>> from PSTansformer.model import build_transformer
 
-# how to used this transformer model 
->>> build_transformer(
-        vocab_src_len=vocabulary_source_length,   # vocabulary source length of sentence like tokeinzer source length of 
-        vocab_tgt_len=vocabulary_target_length,    # same for the target language 
-        src_seq_len=config["seq_len"],     # source language  length of you sentence like 350 
-        tgt_seq_len=config['seq_len'],     # target language length of you sentence same as source length
-        d_model=config['d_model']        # dimension model your language like 512
-)
-```
+# Reference 
+
+* [MODEL]()
+* [BilingualDataset](#BilingualDataset)
+* [train_model](#train_model)
+* [latest_weights_file_path](#latest_weights_file_path)
+* [get_weights_file_path](#get_weights_file_path)
 
 
 
+## BilingualDataset
 
 - if you import the Tensor dataset function, which is convert the tensor data from raw data 
 ```
@@ -31,8 +26,14 @@
         seq_len=config['seq_len'])      # sequence length like 350
 ```
 
+## train_model
+
 - how to used the train model 
+- define the ```get_config```  function which is used in the ```train_model(config)```
+
 ```
+
+
 def get_config():
     return {
         "batch_size": 8,
@@ -52,7 +53,59 @@ def get_config():
 ```
 
 ```
+>>> from PSTransformer.train import train_model 
+
     config = get_config()
     train_model(config)
 ```
 
+## latest_weights_file_path
+
+- Find the latest weights file in the weights folder
+- define the ```get_config```  function which is used in the ```latest_weight_file_path```
+```
+
+
+def get_config():
+    return{
+        "datasource": 'opus_book',    # Name of data
+        "model_folder": "weights",    # put the name in the model folder 
+        "model_basename": "tmodel_"   # put the name in the model basename or file name 
+    }
+```
+
+```
+>>> from PSTransformer.config import latest_weights_file_path
+
+config = get_config()
+latest_weights_file_path(config)
+```
+
+
+## get_weights_file_path
+
+- GEt the weight file Because if model training are break then continoue the model training 
+
+-  ```get_weights_file_path``` function GET the weight file, Before Function i was create the weight file where have the weights of train data 
+
+- model training time if break the training ThEN 
+    - if you are not used ```get_weights_file_path``` then traing start in 1st epochs and put the weight in again
+
+    - If you are used ```get_weights_file_path``` then continoue training, starting of breaking point of training 
+
+
+```
+def get_config():
+    return{
+        "datasource": 'opus_book',    # Name of data
+        "model_folder": "weights",    # put the name in the model folder 
+        "model_basename": "tmodel_"   # put the name in the model basename or file name 
+    }
+```
+
+
+```
+>>> from PSTransformer.config import get_weights_file_path
+
+get_weights_file_path(config, epoch:str)
+```
