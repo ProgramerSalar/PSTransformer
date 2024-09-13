@@ -1,12 +1,12 @@
 
 # Reference 
 
-* [MODEL](https://github.com/ProgramerSalar/PSTransformer/blob/master/Function/MODEL.md)
+* [MODEL](https://github.com/ProgramerSalar/PSTransformer/blob/master/Readme_File/MODEL.md)
 * [BilingualDataset](#BilingualDataset)
 * [train_model](#train_model)
 * [latest_weights_file_path](#latest_weights_file_path)
 * [get_weights_file_path](#get_weights_file_path)
-
+* [Diffusion](https://github.com/ProgramerSalar/PSTransformer/blob/master/Readme_File/DIFFUSION.md)
 
 
 ## BilingualDataset
